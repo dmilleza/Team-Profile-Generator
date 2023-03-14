@@ -32,7 +32,7 @@ describe("Employee tests", () => {
   it("gets ID using getID() method", () => {
     const value = 29;
     const newEmp = new Employee("john", value);
-    expect(newEmp.getID()).toBe(value);
+    expect(newEmp.getId()).toBe(value);
   });
 
   it("gets email using getEmail() method", () => {

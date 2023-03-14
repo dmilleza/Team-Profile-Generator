@@ -4,7 +4,7 @@ describe("manager tests", () => {
   it("sets office number using constructor argument", () => {
     const value = 56;
     const newEmp = new Manager("john", 16, "john@gmail.com", value);
-    expect(newEmp.officeNumber).toBe(testValue);
+    expect(newEmp.officeNumber).toBe(value);
   });
 
   it("returns `manager` from getRole() method", () => {
