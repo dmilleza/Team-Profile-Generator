@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <body class="bg-info">
+    <header class="container-fluid p-5 bg-dark">
+      <div class="row">
+        <div class="col-12 jumbotron">
+          <h1 class="text-center text-white">My Team</h1>
+        </div>
+      </div>
+    </header>
+    <main class="container pt-5">
+      <div class="row px-2 justify-content-center">
+        <div class="card col-8 col-sm-5 col-md-5 col-lg-3 m-2">
+          <div class="card-header">
+            <h2 class="card-title">${manager.getName()}</h2>
+            <h6 class="h-4">${manager.getRole()}</h6>
+          </div>
+          <div class="card-body">
+            <ul class="list-group">
+              <li class="list-group-item">ID: ${manager.getId()}</li>
+              <li class="list-group-item">
+                Email:
+                <a href="mailto:${manager.getEmail()}">${manager.getEmail()}</a>
+              </li>
+              <li class="list-group-item">
+                Office number: ${manager.getOfficeNumber()}
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="card col-8 col-sm-5 col-md-5 col-lg-3 m-2">
+          <div class="card-header">
+            <h2 class="card-title">${engineer.getName()}</h2>
+            <h6 class="h-4">${engineer.getRole()}</h6>
+          </div>
+          <div class="card-body">
+            <ul class="list-group">
+              <li class="list-group-item">ID: ${engineer.getId()}</li>
+              <li class="list-group-item">
+                Email:
+                <a href="mailto:${engineer.getEmail()}"
+                  >${engineer.getEmail()}</a
+                >
+              </li>
+              <li class="list-group-item">
+                <a
+                  href="https://github.com/${engineer.getGithub()}"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >${engineer.getGithub()}</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="card col-8 col-sm-5 col-md-5 col-lg-3 m-2">
+          <div class="card-header">
+            <h2 class="card-title">Jared</h2>
+            <h6 class="h-4">Manager</h6>
+          </div>
+          <div class="card-body">
+            <ul class="list-group">
+              <li class="list-group-item">ID: 1</li>
+              <li class="list-group-item">
+                Email:
+                <a href="mailto:jared@fakemail.com">jared@fakemail.com</a>
+              </li>
+              <li class="list-group-item">Office number: 1</li>
+              <li class="list-group-item">Office number: 1</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card col-8 col-sm-5 col-md-5 col-lg-3 m-2">
+          <div class="card-header">
+            <h2 class="card-title">${intern.getName()}</h2>
+            <h6 class="h-4">${intern.getRole()}</h6>
+          </div>
+          <div class="card-body">
+            <ul class="list-group">
+              <li class="list-group-item">ID: ${intern.getId()}</li>
+              <li class="list-group-item">
+                Email:
+                <a href="mailto:${intern.getEmail()}">${intern.getEmail()}</a>
+              </li>
+              <li class="list-group-item">School: ${intern.getSchool()}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
