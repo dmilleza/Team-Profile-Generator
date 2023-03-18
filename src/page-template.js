@@ -78,17 +78,20 @@ const generateTeam = (team) => {
 
   const html = [];
 
+  //gets the manager object
   html.push(
     team
       .filter((employee) => employee.getRole() === "Manager")
       .map((manager) => generateManager(manager))
   );
+  // gets all engineer objects
   html.push(
     team
       .filter((employee) => employee.getRole() === "Engineer")
       .map((engineer) => generateEngineer(engineer))
       .join("")
   );
+  //gets all intern objects
   html.push(
     team
       .filter((employee) => employee.getRole() === "Intern")
