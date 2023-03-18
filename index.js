@@ -209,6 +209,7 @@ function init() {
         idArray.push(internAns.internId);
         createTeam();
       } else {
+        //if user does not want to add engineer or intern, build the team
         buildTeam();
       }
     };
@@ -216,14 +217,18 @@ function init() {
   createManager();
 }
 
+//when "node index.js" is entered, questions are asked
 init();
 
 function buildTeam() {
+  // if "dist" folder does not exist, create it
   if (!fs.existsSync(DIST_DIR)) {
     fs.mkdirSync(DIST_DIR);
   }
+  // if "team.html" file exists, delete it
   if (fs.existsSync(distPath)) {
     fs.rmSync(distPath);
   }
+  // creates "team.html" file and attaches it to "dist" folder
   fs.writeFileSync(distPath, generateTeam(teamMembers), "utf-8");
 }
